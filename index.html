@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +10,7 @@
   <link rel="stylesheet" href="styles.css">
   <script src="js/app.js" type="module"></script>
 </head>
+
 <body>
   <a class="skip-link" href="#seat-map">Skip to seat map</a>
   <header class="site-header">
@@ -57,7 +59,8 @@
 
         <div class="map-scroll" aria-label="Scrollable seat map">
           <div class="stage">STAGE</div>
-          <div id="seat-map" class="seat-map" role="group" aria-label="Seat map. Use arrow keys to move between seats. Tab moves out of the seat map."></div>
+          <div id="seat-map" class="seat-map" role="group"
+            aria-label="Seat map. Use arrow keys to move between seats. Tab moves out of the seat map."></div>
           <p class="map-hint">All seats are individual buttons. Use arrow keys to navigate.</p>
         </div>
 
@@ -80,20 +83,23 @@
         </div>
         <div class="price-lines">
           <div><span>Subtotal</span><strong id="subtotal">€0.00</strong></div>
-          <div id="discount-line" class="discount-line" hidden><span>Group discount (10%)</span><strong id="discount">−€0.00</strong></div>
+          <div id="discount-line" class="discount-line" hidden><span>Group discount (10%)</span><strong
+              id="discount">−€0.00</strong></div>
         </div>
         <div class="total-line">
           <span>Total</span>
           <strong id="total" aria-live="polite">€0.00</strong>
         </div>
         <p class="discount-note">Book 4 or more seats and receive 10% off.</p>
-        <button id="continue-button" class="button button-primary" type="button">Continue to checkout <span aria-hidden="true">→</span></button>
+        <button id="continue-button" class="button button-primary" type="button">Continue to checkout <span
+            aria-hidden="true">→</span></button>
         <p class="secure-note"><span aria-hidden="true">◇</span> Your booking details are handled securely.</p>
       </aside>
     </div>
   </main>
 
-  <dialog id="checkout-dialog" class="checkout-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+  <dialog id="checkout-dialog" class="checkout-dialog" aria-labelledby="dialog-title"
+    aria-describedby="dialog-description">
     <form id="checkout-form" novalidate>
       <div class="dialog-heading">
         <div>
@@ -110,7 +116,8 @@
       </div>
       <div class="form-field">
         <label for="customer-email">Email address <span aria-hidden="true">*</span></label>
-        <input id="customer-email" name="email" type="email" autocomplete="email" required aria-describedby="email-error">
+        <input id="customer-email" name="email" type="email" autocomplete="email" required
+          aria-describedby="email-error">
         <small id="email-error" class="field-error"></small>
       </div>
       <div id="dialog-problems" class="validation-summary" role="alert" hidden>
@@ -121,8 +128,17 @@
       <button class="button button-primary" type="submit">Book seats</button>
     </form>
   </dialog>
-
+  <dialog id="success-dialog" class="success-dialog">
+    <div class="success-content">
+      <h2>Booking Successful!</h2>
+      <p>Your seats have been booked successfully.</p>
+      <button type="button" id="success-ok">
+        OK
+      </button>
+    </div>
+  </dialog>
   <div id="announcement" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
   <footer class="site-footer">A better way to experience live events.</footer>
 </body>
+
 </html>
